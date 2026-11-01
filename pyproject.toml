@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smart-todo-mcp"
+version = "0.1.0"
+description = "A three-tool FastMCP to-do assistant"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastmcp",
+  "openai-agents[litellm]",
+  "python-dotenv",
+  "streamlit",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+todo-mcp-server = "todo_mcp.server:main"
+todo-agent = "todo_mcp.agent:main"
+todo-tools-demo = "todo_mcp.demo:main"
+todo-ui = "todo_mcp.ui:launch"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/todo_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
