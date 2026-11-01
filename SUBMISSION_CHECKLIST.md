@@ -36,7 +36,7 @@
 
 ## Links to paste before submission
 
-- Repository: `PASTE_GITHUB_REPOSITORY_URL_HERE`
+- Repository: `https://github.com/nadineMck/smart-todo-assistant`
 - Screencast: `PASTE_VIDEO_URL_HERE`
 
 ## Suggested repository commands
